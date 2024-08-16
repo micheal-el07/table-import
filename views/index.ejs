@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h3>Tables</h3>
+    </div>
+    <div class="reference content">
+        <table>
+            <caption>Table 1</caption>
+            <tr>
+                <th>index#</th>
+                <th>value</th>
+            </tr>
+            <% for (let item of data) { %>
+                <tr>
+                    <td>
+                        <%=item.name%>
+                    </td>
+                    <td>
+                        <%=item.value%>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+    </div>
+    <div class="follow-up content">
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Alpha</td>
+                <td>
+                    <%= data[4].value + data[19].value %>
+                </td>
+            </tr>
+            <tr>
+                <td>Beta</td>
+                <td>
+                    <%= data[14].value / data[6].value %>
+                </td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>
+                    <%= data[12].value * data[11].value %>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
