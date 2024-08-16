@@ -12,18 +12,19 @@ const data = fs.readFileSync("Table_Input.csv", "utf8")
 
 let rows = data.split("\n");
 
-// should return ['index #', 'value']
+// should return ['Index #' ,'Value']
 const getAttribute = () => {
     const result = rows[0].split(',')
-    return [result[0],result[1].replace('\r', '')]
+    return [result[0],result[1].trimEnd()]
 }
 
 // return data from a1 to a20
+// ['A1', 20]
 const getRowData = () => {
     let rowData = [];
     for (let i = 1; i < rows.length; i++) {
         const row = rows[i].split(',');
-        rowData.push([row[0], Number(row[1])])
+        rowData.push([row[0], parseInt(row[1].trimEnd())])
     }
     return rowData;
 }
