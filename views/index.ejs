@@ -16,16 +16,16 @@
         <table>
             <caption>Table 1</caption>
             <tr>
-                <th>index#</th>
-                <th>value</th>
+                <th>Index #</th>
+                <th>Value</th>
             </tr>
             <% for (let item of data) { %>
                 <tr>
                     <td>
-                        <%=item.name%>
+                        <%= item['Index #'] %>
                     </td>
                     <td>
-                        <%=item.value%>
+                        <%=item.Value%>
                     </td>
                 </tr>
                 <% } %>
@@ -40,19 +40,19 @@
             <tr>
                 <td>Alpha</td>
                 <td>
-                    <%= data[4].value + data[19].value %>
+                    <%= data[4].Value + data[19].Value %>
                 </td>
             </tr>
             <tr>
                 <td>Beta</td>
                 <td>
-                    <%= data[14].value / data[6].value %>
+                    <%= data[14].Value / data[6].Value %>
                 </td>
             </tr>
             <tr>
                 <td>Charlie</td>
                 <td>
-                    <%= data[12].value * data[11].value %>
+                    <%= data[12].Value * data[11].Value %>
                 </td>
             </tr>
         </table>
