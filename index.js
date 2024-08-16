@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import fs from "fs";
-// import 
 
 const app = express();
 const port = 4000;
@@ -48,11 +47,10 @@ const CSVtoObject = () => {
 }
 
 let newData = CSVtoObject()
-
-// console.log(newData)
+let header = getAttribute()
 
 app.get("/", (req, res) => {
-    res.render('index.ejs', { data: newData })
+    res.render('index.ejs', { data: newData, head: header })
 })
 
 app.listen(port, () => {
