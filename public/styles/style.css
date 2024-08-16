@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: linear-gradient(to right , #9138AB, #F1A0FF); */
+}
+
+table {
+    background-color: aliceblue;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.content {
+    margin: 20px 0px;
+}
+
+.reference {
+    margin-top: 0;
+}
+
+td {
+    padding: 5px;
+    min-width: 150px;
+    text-align: center;
+}
+
+th {
+    padding: 5px;
+    min-width: 150px;
+}
+
+caption {
+    margin: 10px;
+    /* color: aliceblue; */
+    font-size: 22px;
+    font-weight: 800;
+}
